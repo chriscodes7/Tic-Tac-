@@ -1,0 +1,25 @@
+body {
+   font color: red;
+   font-size: 10px;
+}
+
+#gameboard {
+   width: 31.2em;
+   width: 31.2em;
+   margin: 0 auto;
+   border: 3px solid red;
+}
+
+.cell {
+   border: red solid 1px;
+   width: 10em;
+   height: 10em;
+   float: left;
+
+}
+
+.row {
+ box-sizing: border-box;
+}
+
+[4:16]
