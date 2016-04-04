@@ -1,17 +1,23 @@
 body {
-   font color: red;
+   background: black;
+   text-align: center;
+   color: white;
    font-size: 10px;
+   font-family: sans-serif;
+}
+h1{
+   font-size: 56px;
 }
 
 #gameboard {
    width: 31.2em;
    width: 31.2em;
    margin: 0 auto;
-   border: 3px solid red;
+   border: 3px solid white;
 }
 
 .cell {
-   border: red solid 1px;
+   border: white solid 1px;
    width: 10em;
    height: 10em;
    float: left;
@@ -22,4 +28,8 @@ body {
  box-sizing: border-box;
 }
 
-[4:16]
+.x{
+   width: 100%;
+   height: 100%;
+
+}
