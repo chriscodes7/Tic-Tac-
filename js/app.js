@@ -10,6 +10,11 @@ $(document).ready(function() {
     var count = 0;
     // count of play
     var turn = '#';
+    var scorea = 0;
+    var scoreb = 0;
+
+    $("#scoreb").text(scoreb);
+
     // this is the turn either # or !
     var startGame = function() {
         console.log('startGame:', $gameCells);
@@ -35,8 +40,12 @@ $(document).ready(function() {
     var champ = null;
     var getWinner = function() {
         if (winnerIs('#')) {
+            scorea++;
+             $("#scorea").text(scorea);
             return '#';
         } else if (winnerIs('!')) {
+            scoreb++;
+            $("#scoreb").text(scoreb);
             return '!';
         } else {
             return null;
@@ -61,19 +70,21 @@ $(document).ready(function() {
     startGame();
 
     function reset() {
-        var moves = ["", "", "", "", "", "", "", "", ""];
+        moves = ["", "", "", "", "", "", "", "", ""];
         // allows you to track your moves on the board
-        var count = 0;
+        count = 0;
         // count of play
-        var turn = '#';
+        turn = '#';
         // this is the turn either # or !
         $($gameCells).on('click');
     };
 
+
     $('#reset').click(function() {
-        $(this).off();
+        $($gameCells).off();
         $(this).on();
         reset();
         $gameCells.html('');
+        startGame();
     });
 });
